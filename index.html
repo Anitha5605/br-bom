@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        let count1=["John Doe","John Doe","Mike Ross","Dan Star"]
+        let count2=["CEO & Founder","Architect" ,"Architect","Architect"]
+        let count3=["Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.","Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum."]
+        let img=["https://www.w3schools.com/w3images/team2.jpg","https://www.w3schools.com/w3images/team1.jpg","https://www.w3schools.com/w3images/team3.jpg","https://www.w3schools.com/w3images/team4.jpg"]
+        var container=document.createElement("div")
+        container.style.display="flex";
+        
+        
+       for(i=0; i<4; i++){
+        var p=document.createElement("div");
+        var a=document.createElement("div");
+       a.style.background=`url(${img[i]})`;
+       a.style.height="20vh";
+       a.style.width="20vw";
+       a.style.backgroundRepeat="no-repeat";
+       a.style.backgroundSize="contain";
+       var p1=document.createElement("div");
+       var b=document.createElement("h1");
+       b.innerHTML=count1[1];
+
+       var c=document.createElement("div");
+       c.innerHTML=count2[i];
+
+
+       var d=document.createElement("p")
+       d.innerHTML=count3[i];
+      var e=document.createElement("div")
+      e.innerHTML="contacts";
+      e.style.color="black";
+      e.style.textAlign="center";
+      e.style.border="2px solid ";
+      e.style.width="100px";
+container.appendChild(p);
+       p.appendChild(a);
+       p.appendChild(p1);
+       p1.appendChild(b);
+       p1.appendChild(c);
+       p1.appendChild(d);
+       p1.appendChild(e);
+    //  p.appendChild(b);
+    //  p.appendChild(c);
+    //  p.appendChild(d);
+    //  p.appendChild(e);
+
+    //    document.body.appendChild(p);
+    document.body.appendChild(container);
+       console.log(container);
+
+
+       }
+       
+
+    </script>
+</body>
+</html>
